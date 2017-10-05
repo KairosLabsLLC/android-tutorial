@@ -8,51 +8,64 @@
     tools:context="com.example.tutorial.tutorial_4.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <EditText
-        android:id="@+id/editTextCreditCardNumber"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:inputType="number"
-        android:ems="10"
-        android:hint="Credit Card Number"
-        tools:layout_editor_absoluteY="16dp"
-        app:layout_constraintRight_toLeftOf="@+id/button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        app:layout_constraintHorizontal_bias="0.0" />
 
-    <EditText
-        android:id="@+id/editTextCvv"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:inputType="number"
-        android:ems="10"
-        android:hint="CVV"
-        tools:layout_editor_absoluteY="80dp"
-        app:layout_constraintRight_toLeftOf="@+id/button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
 
-    <EditText
-        android:id="@+id/editTextExpiryDate"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:inputType="text"
-        android:ems="10"
-        android:hint="Expiry Date"
-        tools:layout_editor_absoluteY="150dp"
-        app:layout_constraintRight_toLeftOf="@+id/button"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+        <!--Put form controls here-->
+        <EditText
+            android:id="@+id/editTextCreditCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="0.03"
+            android:ems="10"
+            android:hint="Credit Card Number"
+            android:inputType="number"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button"
+            tools:layout_editor_absoluteY="16dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="93dp"
-        android:layout_height="52dp"
-        android:hint="Pay"
-        android:onClick="sendMessage"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintLeft_toRightOf="@+id/editText"
-        app:layout_constraintRight_toRightOf="parent" />
+        <EditText
+            android:id="@+id/editTextCvv"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:ems="10"
+            android:hint="CVV"
+            android:inputType="number"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <EditText
+            android:id="@+id/editTextExpiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:ems="10"
+            android:hint="Expiry Date"
+            android:inputType="text"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button"
+            tools:layout_editor_absoluteY="150dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="93dp"
+            android:layout_height="52dp"
+            android:hint="Pay"
+            android:onClick="submitCard"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+            app:layout_constraintLeft_toRightOf="@+id/editText"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
